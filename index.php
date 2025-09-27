@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JobIntern — Student Jobs & Internships</title>
+  <meta name="description" content="Find internships and student jobs. Employers post opportunities and manage applicants." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="theme-color" content="#0B5FFF" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">JobIntern</a>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#jobs">Jobs</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <div class="auth-actions">
+        <a class="btn btn-outline" href="php/login.php">Login</a>
+        <a class="btn btn-primary" href="php/register.php">Sign Up</a>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" id="mobileToggle">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Find internships & jobs that launch your career</h1>
+          <p class="lead">Discover opportunities from verified employers, build your profile, and apply in seconds.</p>
+
+          <form class="search-form" action="php/jobs/list.php" method="get" role="search" aria-label="Search jobs">
+            <div class="search-row">
+              <input name="q" type="search" placeholder="Search jobs, internships or companies" aria-label="Job keywords" />
+              <input name="location" type="text" placeholder="Location (optional)" aria-label="Location" />
+              <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+          </form>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="php/register.php?role=student">I'm a Student</a>
+            <a class="btn btn-outline" href="php/register.php?role=employer">I'm an Employer</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- placeholder illustration -->
+          <div class="illustration">
+            <svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <rect x="0" y="0" width="320" height="220" rx="12" fill="#EAF2FF"/>
+              <!-- simple shapes -->
+              <circle cx="60" cy="80" r="28" fill="#0B5FFF"/>
+              <rect x="110" y="40" width="160" height="24" rx="6" fill="#0B5FFF" />
+              <rect x="110" y="74" width="120" height="18" rx="6" fill="#00B894" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="features container">
+      <div class="feature">
+        <h3>Verified Employers</h3>
+        <p>Top organizations list internships and entry roles for students.</p>
+      </div>
+      <div class="feature">
+        <h3>CV Builder</h3>
+        <p>Create and store your CV for quick applications.</p>
+      </div>
+      <div class="feature">
+        <h3>Easy Applications</h3>
+        <p>Apply with one click or include a cover letter.</p>
+      </div>
+    </section>
+
+    <section id="jobs" class="jobs-preview container">
+      <h2>Recent Opportunities</h2>
+
+      <div class="cards-grid">
+        <!-- sample card -->
+        <article class="job-card">
+          <h3 class="job-title">Software Engineering Intern</h3>
+          <p class="meta">Acme Corp — Kampala • Internship</p>
+          <p class="job-excerpt">Work with the dev team on web features. Required: basic PHP/JS skills.</p>
+          <div class="card-actions">
+            <a href="php/jobs/detail.php?id=1" class="btn btn-outline">View</a>
+            <a href="php/jobs/apply.php?id=1" class="btn btn-primary">Apply</a>
+          </div>
+        </article>
+
+        <!-- duplicate sample card for layout -->
+        <article class="job-card">
+          <h3 class="job-title">Marketing Intern</h3>
+          <p class="meta">Bright Media — Remote • Internship</p>
+          <p class="job-excerpt">Support social media campaigns and analytics.</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-outline">View</a>
+            <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+        </article>
+
+        <article class="job-card">
+          <h3 class="job-title">Frontend Developer</h3>
+          <p class="meta">Nimbus — Kampala • Part-time</p>
+          <p class="job-excerpt">Work with React/JS to build components.</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-outline">View</a>
+            <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="col">
+        <strong>JobIntern</strong>
+        <p>Connecting students with opportunities.</p>
+      </div>
+      <div class="col">
+        <nav>
+          <a href="#">About</a> · <a href="#">Contact</a> · <a href="#">Privacy</a>
+        </nav>
+      </div>
+      <div class="col">
+        <small>© <span id="year"></span> JobIntern. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
